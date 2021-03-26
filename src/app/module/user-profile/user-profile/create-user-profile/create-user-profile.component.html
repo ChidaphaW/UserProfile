@@ -1,0 +1,52 @@
+<div class="container">
+    <div class="d-flex flex-column my-4 mx-4">
+        <div class="col mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="userProfile.name">
+        </div>
+
+        <div class="col mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Last Name</label>
+            <input type="text" class="form-control" id="last_name" placeholder="Last-Name" [(ngModel)]="userProfile.last_name">
+        </div>
+
+        <div class="col mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Age</label>
+            <input type="text" class="form-control" id="age" placeholder="age" [(ngModel)]="userProfile.age">
+        </div>
+
+        <div class="col mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Gender</label>
+            <input type="text" class="form-control" id="gender" placeholder="Gender" [(ngModel)]="userProfile.gender">
+        </div>
+
+        <div class="col mb-4">
+            <label for="exampleFormControlTextarea1" class="form-label">Address</label>
+            <textarea class="form-control" id="Address" rows="3" [(ngModel)]="userProfile.address"> </textarea>
+        </div>
+
+        <div class="col mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Citizen</label>
+            <input type="text" class="form-control" id="citizen" placeholder="Citizen" [(ngModel)]="userProfile.citizen">
+        </div>
+
+        <div class="col mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Nationality</label>
+            <input type="text" class="form-control" id="nationality" placeholder="Nationality" [(ngModel)]="userProfile.nationality">
+        </div>
+
+        <div class="col mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Telephone</label>
+            <input type="text" class="form-control" id="telephone" placeholder="Telephone" [(ngModel)]="userProfile.telephone">
+        </div>
+
+        <div class="col mb-4">
+            <label for="exampleFormControlInput1" class="form-label">Status</label>
+            <input type="text" class="form-control" id="status" placeholder="Status" [(ngModel)]="userProfile.status">
+        </div>
+
+        <div class="col-md-12 float-right">
+            <button type="button" class="btn btn-secondary" (click)="createUserProfile(userProfile)"> Create...</button>
+        </div>
+    </div>
+</div>

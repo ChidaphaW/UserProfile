@@ -1,0 +1,84 @@
+<br> &nbsp;&nbsp;&nbsp;
+<button a routerLink="/merchant" type="button" class="btn btn-danger">Back</button>
+
+<div class="container">
+    <div class="col-12">
+        <div class="col-2"></div>
+
+        <div class="d-flex flex-column my-4 mx-4">
+
+            <div class="input-group mb-3">
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <label for="exampleFormControlInput1" class="form-label">Name: </label>
+                    <label for="exampleFormControlInput1" class="form-label"><strong>&nbsp;{{merchant.nameMer}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="name" [(ngModel)]="merchant.nameMer" readonly> -->
+                </div>
+
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <label for="exampleFormControlInput1" class="form-label">Product Type: </label>
+                    <label for="exampleFormControlInput1" class="form-label"><strong>&nbsp;{{merchant.proDuctType}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="proDuctType" [(ngModel)]="merchant.proDuctType" readonly> -->
+                </div>
+
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <label for="exampleFormControlInput1" class="form-label">Open Year: </label>
+                    <label for="exampleFormControlInput1" class="form-label"><strong>&nbsp;{{merchant.openYear}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="openYear" [(ngModel)]="merchant.openYear" readonly> -->
+                </div>
+            </div>
+            <div class="input-group mb-3">
+                <div class="col-md-6 col-sm-12 mb-4">
+                    <label for="exampleFormControlInput1" class="form-label">Open Time: </label>
+                    <label for="exampleFormControlInput1" class="form-label"><strong>&nbsp;{{merchant.openTime}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="openTime" [(ngModel)]="merchant.openTime" readonly> -->
+                </div>
+
+                <div class="col-md-6 col-sm-12 mb-4">
+                    <label for="exampleFormControlInput1" class="form-label">Close Time: </label>
+                    <label for="exampleFormControlInput1" class="form-label"><strong>&nbsp;{{merchant.closeTime}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="closeTime" [(ngModel)]="merchant.closeTime" readonly> -->
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+    </div>
+
+
+    <h1 align='center'> ------------------------------------------------</h1>
+
+
+    <form class="text-center">
+        <label for="name">Choose a name : </label> &nbsp;&nbsp;&nbsp;
+        <select name="name" id="name" [(ngModel)]="userId">
+            <option *ngFor="let userProfile of userProfileList" [value]="userProfile.id">
+                &nbsp;&nbsp;{{userProfile.name}}&nbsp;&nbsp;</option>
+        </select> &nbsp;&nbsp;&nbsp;
+        <button type="button" class="btn btn-success" (click)="createUserMerchant()"> Submit</button> &nbsp;
+    </form>
+
+    <h1 align='center'> ------------------------------------------------</h1>
+
+    <div class="container">
+        <div class="col-4">
+
+            <div *ngFor="let userProfile of userProfileList2">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Name" aria-label="name" [(ngModel)]="userProfile.name" readonly>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 
+    <div *ngIf="let userProfile of userProfileList2"> 
+        when condition is true. 
+    </div> 
+    <ng-template #elseStatement> 
+        when condition is false. 
+    </ng-template>  -->

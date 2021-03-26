@@ -1,0 +1,103 @@
+<br> &nbsp;&nbsp;&nbsp;
+<button a routerLink="/user-profile" type="button" class="btn btn-danger">Back</button>
+
+<div class="container">
+    <div class="col-12">
+        <div class="col-2"></div>
+
+        <div class="d-flex flex-column my-4 mx-4">
+
+            <div class="input-group mb-3">
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <label for="exampleFormControlInput1" class="form-label">Name: </label>
+                    <label for="exampleFormControlInput1" class="form-label"><strong>&nbsp;{{userProfile.name}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="name" [(ngModel)]="userProfile.name" readonly> -->
+                </div>
+
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <label for="exampleFormControlInput2" class="form-label">Last Name: </label>
+                    <label for="exampleFormControlInput2" class="form-label"><strong>&nbsp;{{userProfile.last_name}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="last_name" [(ngModel)]="userProfile.last_name" readonly> -->
+                </div>
+
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <label for="exampleFormControlInput3" class="form-label">Age: </label>
+                    <label for="exampleFormControlInput3" class="form-label"><strong>&nbsp;{{userProfile.age}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="age" [(ngModel)]="userProfile.age" readonly> -->
+                </div>
+            </div>
+
+            <div class="input-group mb-3">
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <label for="exampleFormControlInput4" class="form-label">Gender: </label>
+                    <label for="exampleFormControlInput4" class="form-label"><strong>&nbsp;{{userProfile.gender}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="gender" [(ngModel)]="userProfile.gender" readonly> -->
+                </div>
+
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <label for="exampleFormControlTextarea1" class="form-label">Address: </label>
+                    <label for="exampleFormControlTextarea1" class="form-label"><strong>&nbsp;{{userProfile.address}}</strong></label>
+                    <!-- <textarea class="form-control" id="Address" rows="3" [(ngModel)]="userProfile.address"> </textarea> -->
+                </div>
+
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <label for="exampleFormControlInput-citizen" class="form-label">Citizen: </label>
+                    <label for="exampleFormControlInput-citizen" class="form-label"><strong>&nbsp;{{userProfile.citizen}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="citizen" [(ngModel)]="userProfile.citizen" readonly> -->
+                </div>
+
+            </div>
+
+            <div class="input-group mb-3">
+
+                <div class="col-md-4 col-sm-12 mb-4">
+                    <label for="exampleFormControlInput-nation" class="form-label">Nationality: </label>
+                    <label for="exampleFormControlInput-nation" class="form-label"><strong>&nbsp;{{userProfile.nationality}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="nationality" [(ngModel)]="userProfile.nationality" readonly> -->
+                </div>
+
+                <div class="col-sm-12 col-md-4 mb-4">
+                    <label for="exampleFormControlInput-tel" class="form-label">Telephone: </label>
+                    <label for="exampleFormControlInput-tel" class="form-label"><strong>&nbsp;{{userProfile.telephone}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="telephone" [(ngModel)]="userProfile.telephone"> -->
+                </div>
+
+                <div class="col-sm-12 col-md-4 mb-4">
+                    <label for="exampleFormControlInput-sta" class="form-label">Status: </label>
+                    <label for="exampleFormControlInput-sta" class="form-label"><strong>&nbsp;{{userProfile.status}}</strong></label>
+                    <!-- <input type="text" class="form-control" id="status" [(ngModel)]="userProfile.status"> -->
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<h1 align='center'> ------------------------------------------------</h1>
+
+
+<form class="text-center">
+
+    <label for="nameMer">Choose a merchant : </label> &nbsp;&nbsp;&nbsp;
+    <select name="nameMer" id="nameMer" [(ngModel)]="merchantId">
+        <option *ngFor="let merchant of merchantList" [value]="merchant.idMer" >&nbsp;&nbsp;{{merchant.nameMer}}/{{merchant.proDuctType}}&nbsp;</option> 
+    </select> &nbsp;&nbsp;&nbsp;
+
+    <button type="button" class="btn btn-success" (click)="createUserMerchant()"> Submit</button> &nbsp;
+
+</form>
+
+<h1 align='center'> ------------------------------------------------</h1>
+
+<div class="container">
+    <div class="col-4">
+
+        <div *ngFor="let merchant of merchantList2">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Name" aria-label="name" [(ngModel)]="merchant.nameMer" readonly>
+
+            </div>
+        </div>
+
+    </div>
+</div>

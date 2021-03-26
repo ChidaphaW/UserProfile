@@ -1,0 +1,57 @@
+<style>
+    .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+    
+    @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+            font-size: 3.5rem;
+        }
+    }
+</style>
+
+<section class="py-5 text-center container">
+    <div class="row py-lg-5">
+        <div class="col-lg-6 col-md-8 mx-auto">
+            <h1 class="fw-light">Create Merchant</h1>
+
+        </div>
+    </div>
+</section>
+
+<div class="container">
+    <div class="row g-4">
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Name Merchant</label>
+            <input type="text" class="form-control" id="name" placeholder="Name" [(ngModel)]="merchant.nameMer">
+        </div>&nbsp;&nbsp;&nbsp;
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Product type</label>
+            <input type="text" class="form-control" id="Product" placeholder="Product" [(ngModel)]="merchant.proDuctType">
+        </div>&nbsp;&nbsp;&nbsp;
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Open Time</label>
+            <input type="text" class="form-control" id="Open" placeholder="Open" [(ngModel)]="merchant.openTime">
+        </div>&nbsp;&nbsp;&nbsp;
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Close Time</label>
+            <input type="text" class="form-control" id="Close" placeholder="Close" [(ngModel)]="merchant.closeTime">
+        </div>&nbsp;&nbsp;&nbsp;
+
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Open year</label>
+            <input type="text" class="form-control" id="Year" placeholder="Year" [(ngModel)]="merchant.openYear">
+        </div>&nbsp;&nbsp;&nbsp;
+
+        <button type="button" class="btn btn-secondary" (click)="createMerchant(merchant)"> Create...</button>
+
+    </div>
+</div>
